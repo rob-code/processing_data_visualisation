@@ -13,21 +13,14 @@ void setup() {
   textAlign(CENTER);
   fill(190);
   text("Global Methane Emissions by Sector and Country", width/2, 60);
-
-
-
-
   table = loadTable("methane-data.csv", "header");
 
-
   xy = coordinateManager(sectors.length);
-
-
+  
   for (int i = 0; i < sectors.length; i++) {
     SprayDiagram sprayDiagram = new SprayDiagram(xy[i][0], xy[i][1], sectors[i], diagramData(sectors[i]));
   }
 }
-
 
 
 int[][] coordinateManager(int n) {
